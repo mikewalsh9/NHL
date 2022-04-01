@@ -1,1 +1,1 @@
-# NHL-Database
+# NHL
