@@ -1,0 +1,11 @@
+CREATE TABLE NHL.Positions
+SELECT CONVERT(code, CHAR(10)) AS PosCode,
+CONVERT(fullname, CHAR(50)) AS PosName,
+CONVERT(type, CHAR(50)) AS PosType
+FROM NHLStaging.Positions;
+
+ALTER TABLE NHL.Positions
+MODIFY PosCode VARCHAR(10) NOT NULL;
+
+ALTER TABLE NHL.Positions
+ADD PRIMARY KEY (PosCode);

@@ -1,0 +1,10 @@
+CREATE TABLE NHL.Conferences
+SELECT CONVERT(id, CHAR(10)) AS ConfID,
+CONVERT(name, CHAR(40)) AS ConfName
+FROM NHLStaging.Conferences;
+
+ALTER TABLE NHL.Conferences 
+MODIFY ConfID VARCHAR(10) NOT NULL;
+
+ALTER TABLE NHL.Conferences
+ADD PRIMARY KEY (ConfID);
